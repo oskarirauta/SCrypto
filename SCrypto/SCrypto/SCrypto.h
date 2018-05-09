@@ -2,11 +2,11 @@
 //  SCrypto.h
 //  SCrypto
 //
-//  Created by Maksym Shcheglov on 21/01/16.
-//  Copyright © 2016 Maksym Shcheglov. All rights reserved.
+//  Created by Oskari Rauta on 09/05/2018.
+//  Copyright © 2018 Oskari Rauta. All rights reserved.
 //
 
-@import Foundation;
+#import <UIKit/UIKit.h>
 
 //! Project version number for SCrypto.
 FOUNDATION_EXPORT double SCryptoVersionNumber;

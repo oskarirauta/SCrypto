@@ -28,7 +28,11 @@ public extension Data {
 
 
 internal protocol RawConvertible {
+    #if swift(>=2.2)
     associatedtype RawValue
+    #else
+    typealias RawValue
+    #endif
     var rawValue: RawValue { get }
 }
 
@@ -621,7 +625,7 @@ public extension Data {
 
      - returns: Encrypted data.
      */
-    public func encrypt(_ algorithm: Cipher.Algorithm, options: Cipher.Options, key: Data, iv: Data? = nil) throws -> Data {
+    public func encrypt(_ algorithm: Cipher.Algorithm = .aes, options: Cipher.Options = .PKCS7Padding, key: Data, iv: Data? = nil) throws -> Data {
         let cipher = Cipher(algorithm: algorithm, options: options, iv: iv?.bytesArray())
         let encryptedBytes = try cipher.encrypt(self.bytesArray(), key: key.bytesArray())
         return Data(bytes: UnsafePointer<UInt8>(encryptedBytes), count: encryptedBytes.count)
@@ -639,7 +643,7 @@ public extension Data {
 
      - returns: Decrypted data.
      */
-    public func decrypt(_ algorithm: Cipher.Algorithm, options: Cipher.Options, key: Data, iv: Data? = nil) throws -> Data {
+    public func decrypt(_ algorithm: Cipher.Algorithm = .aes, options: Cipher.Options = .PKCS7Padding, key: Data, iv: Data? = nil) throws -> Data {
         let cipher = Cipher(algorithm: algorithm, options: options, iv: iv?.bytesArray())
         let decryptedBytes = try cipher.decrypt(self.bytesArray(), key: key.bytesArray())
         return Data(bytes: UnsafePointer<UInt8>(decryptedBytes), count: decryptedBytes.count)

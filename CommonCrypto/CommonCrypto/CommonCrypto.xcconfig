@@ -1,0 +1,10 @@
+//
+//  CommonCrypto.xcconfig
+//  Scrypto
+//
+//  Created by Oskari Rauta on 09/05/2018.
+//  Copyright © 2018 Oskari Rauta. All rights reserved.
+//
+MODULEMAP_FILE[sdk=iphoneos*] = $(SRCROOT)/CommonCrypto/iphoneos.modulemap
+MODULEMAP_FILE[sdk=iphonesimulator*] = $(SRCROOT)/CommonCrypto/iphonesimulator.modulemap
+MODULEMAP_FILE[sdk=macosx*] = $(SRCROOT)/CommonCrypto/macosx.modulemap
