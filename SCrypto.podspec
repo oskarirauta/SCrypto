@@ -1,11 +1,8 @@
 Pod::Spec.new do |s|
   s.name             = "SCrypto"
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.license          = { :type => 'Free', :text => 'Free' }
-  s.summary          = 'SCrypto Framework'
-  s.description      = <<-DESC
-My fork of SCrypto
-                       DESC
+  s.summary          = 'SCrypto Framework (Forked)'
 
   s.homepage         = "https://github.com/oskarirauta/SCrypto.swift"
   s.author           = { "Oskari Rauta" => "oskari.rauta@gmail.com" }
