@@ -7,7 +7,4 @@
    <FileRef
       location = "group:SCrypto/SCrypto.xcodeproj">
    </FileRef>
-   <FileRef
-      location = "group:../ios-commoncrypto/CommonCrypto.xcodeproj">
-   </FileRef>
 </Workspace>
