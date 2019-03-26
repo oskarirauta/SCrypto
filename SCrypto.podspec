@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "SCrypto"
-  s.version          = '5.0.0'
+  s.version          = '5.0.1'
   s.license          = { :type => 'Free', :text => 'Free' }
   s.summary          = 'SCrypto Framework (Forked)'
 
@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => "https://github.com/oskarirauta/SCrypto.git", :tag => s.version.to_s }
 
   s.swift_version = '5.0'
-  s.ios.deployment_target = '12.2'
+  s.ios.deployment_target = '12.1'
 
   s.source_files = [
 			'SCrypto/SCrypto/SCrypto.swift',
