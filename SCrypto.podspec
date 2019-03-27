@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "SCrypto"
-  s.version          = '5.0.2'
+  s.version          = '5.0.3'
   s.license          = { :type => 'Free', :text => 'Free' }
   s.summary          = 'SCrypto Framework (Forked)'
 
